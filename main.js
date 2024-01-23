@@ -16,7 +16,7 @@ const app = createApp({
   },
   methods:{
     login(){
-      console.log('login');
+      // console.log('login');
       axios.post(loginAPI,user)
         // 成功
         .then((res) => {

@@ -37,22 +37,22 @@ const app = createApp({
       }
       axios[http](usingAPI, { data: this.tempData })// 筆記:文件上的結構 { data: {...} }
       .then((res) => {
-        console.log(res.data.message);
+        // console.log(res.data.message);
         this.getProducts();
         productModal.hide();
       }).catch((err) => {
-        console.log(err.data.message);
+        // console.log(err.data.message);
       })
     },
     deleteProduct(){
       let usingAPI = `${postProductAPI}/${this.tempData.id}`
       axios.delete(usingAPI)// 筆記:文件上的結構 { data: {...} }
       .then((res) => {
-        console.log(res.data.message);
+        // console.log(res.data.message);
         this.getProducts();
         delProductModal.hide();
       }).catch((err) => {
-        console.log(err.data.message);
+        // console.log(err.data.message);
       })
     },
     openModal(action,item){
@@ -71,7 +71,6 @@ const app = createApp({
       }
     },
     addImgs(){
-      console.log("addImgs");
       this.tempData.imagesUrl.push(this.tempImg);
       this.tempImg='';
     },
@@ -99,7 +98,7 @@ const app = createApp({
       .then((res) => {
           // 驗證成功
           // this.getProducts();
-          console.log('驗證成功');
+          // console.log('驗證成功');
           this.getProducts();
       })
       .catch((err) => {
